@@ -1,0 +1,24 @@
+img {  /*Behövdes för att göra så att carouselen såg någorlunda bra ut*/
+    width:auto;
+    height:auto;
+    max-width:100%;
+    max-height:40vh;
+}
+
+.btn
+{
+    font-size: calc(0.5em + 1vw) !important;
+}
+
+span
+{
+    font-size: calc(1em + 1vw);
+    margin: 1vw;
+    text-decoration: none;
+}
+
+header {
+    padding: 0;
+    margin-bottom: 0;
+}
+
