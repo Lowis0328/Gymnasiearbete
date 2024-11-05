@@ -4,6 +4,27 @@ img {  /*Behövdes för att göra så att carouselen såg någorlunda bra ut*/
     max-width:100%;
     max-height:40vh;
 }
+.navbar{
+    background-color: #FFFFC5;
+}
+
+.verktygDiv{
+    display: flex;
+    width: 60%;
+    max-width: 40%;
+    height: 30vh;
+    background-color: #c0a1a1;
+    position: relative;
+    margin-left: 0 !important;
+}
+
+.newDiv{
+    width: 60%;
+    max-width: 60%;
+    height: 30vh;
+    background-color: #8bd48b;
+    position:relative;
+}
 
 .btn
 {
