@@ -10,13 +10,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <style>
         .chat-container {
-            max-width: 800px;
+            max-width: 100vh;
             margin: 20px auto;
             padding: 20px;
             border: 1px solid #ccc;
             border-radius: 10px;
             background-color: #152142;
-            height: 50vh;
+            height: 80vh;
         }
         .chat-box {
             max-height: 400px;
@@ -32,6 +32,12 @@
         .chat-message.bot {
             text-align: left;
         }
+
+        #input-user
+        {
+            width: 50%;
+        }
+
     </style>
 </head>
 <body>
@@ -51,8 +57,34 @@
 
       <div class="chat-container">
         <div class="chat-box" id="chat-box"></div>
+        <button class="btn btn-primary mt-2" id="buttonSend" onclick="sendMessage()">Send</button>
         <input type="text" id="user-input" class="form-control" placeholder="Ask a question...">
-        <button class="btn btn-primary mt-2" onclick="sendMessage()">Send</button>
     </div>
+
+    <script>
+        async function getCohereResponse(userMessage) {
+            const response = await fetch('/openAi_API_call/' + userMessage);
+            const data = await response.text();
+            return data;
+        }
+
+        async function sendMessage() {
+            var userMessage = document.getElementById("user-input").value;
+            var chatBox = document.getElementById("chat-box");
+            var userMessageElement = document.createElement("div");
+            userMessageElement.classList.add("chat-message", "user");
+            userMessageElement.innerText = userMessage;
+            chatBox.appendChild(userMessageElement);
+
+
+            var botResponse = await getCohereResponse(userMessage);
+            var botMessageElement = document.createElement("div");
+            document.getElementById("user-input").value = "";
+            botMessageElement.classList.add("chat-message", "bot");
+            botMessageElement.innerText = botResponse;
+            chatBox.appendChild(botMessageElement);
+        }
+        document.getElementById('buttonSend').addEventListener('click', sendMessage);
+    </script>
 </body>
 </html>
