@@ -57,15 +57,46 @@
 
       <div class="chat-container">
         <div class="chat-box" id="chat-box"></div>
-        <button class="btn btn-primary mt-2" id="buttonSend" onclick="sendMessage()">Send</button>
+        <button class="btn btn-primary mt-2" id="buttonSend">Send</button>
         <input type="text" id="user-input" class="form-control" placeholder="Ask a question...">
     </div>
 
     <script>
         async function getCohereResponse(userMessage) {
-            const response = await fetch('/openAi_API_call/' + userMessage);
-            const data = await response.text();
-            return data;
+            if (userMessage.includes("/"))
+            {
+                let new_message = userMessage.replace("/", "divided by");
+                const response = await fetch('/openAi_API_call/' + new_message);
+                const data = await response.text();
+                return data;
+            }
+            else if (userMessage.includes("*"))
+            {
+                let new_message = userMessage.replace("*", "multiplied by");
+                const response = await fetch('/openAi_API_call/' + new_message);
+                const data = await response.text();
+                return data;
+            }
+            else if (userMessage.includes("+"))
+            {
+                let new_message = userMessage.replace("+", "added to");
+                const response = await fetch('/openAi_API_call/' + new_message);
+                const data = await response.text();
+                return data;
+            }
+            else if (userMessage.includes("-"))
+            {
+                let new_message = userMessage.replace("-", "subtracted by");
+                const response = await fetch('/openAi_API_call/' + new_message);
+                const data = await response.text();
+                return data;
+            }
+            else
+            {
+                const response = await fetch('/openAi_API_call/' + userMessage);
+                const data = await response.text();
+                return data;
+            }
         }
 
         async function sendMessage() {
