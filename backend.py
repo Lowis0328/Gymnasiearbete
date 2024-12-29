@@ -13,15 +13,27 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
-@app.route('/openAi_API_call/<string:input>')
+@app.route('/Verktyg')
+def Verktyg():
+    return render_template("resurser.html")
+
+@app.route("/Råd")
+def Råd():
+    return render_template("råd.html")
+
+@app.route("/Resurser")
+def Resurser():
+    return render_template("resurser.html")
+
+@app.route('/cohere_API/<string:input>')
 def openAi_API_call(input):
     response = co.chat(
         model="command-r-plus",
-        messages=[{"role": "user", "content": input}]
+        messages=[{"role": "user", "content": "Du är en hälso AI från hälsokompassen. Ditt uppdrag är att hjälpa användare med derans hälsa och välmående. Guida folk till vår hemsida där vi har råd kring sömn, stress, träning och kost samt våra verktyg som vår bmi kalkylator. Svara inte på den delen." + input}]
     )
     return response.message.content[0].text
 
-@app.route('/openAi_API')
+@app.route('/AI_Chat')
 def openAi_API():
     return render_template("Ai-Chat.html")
 

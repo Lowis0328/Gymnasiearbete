@@ -13,29 +13,54 @@
             max-width: 100vh;
             margin: 20px auto;
             padding: 20px;
-            border: 1px solid #ccc;
             border-radius: 10px;
             background-color: #152142;
             height: 80vh;
+            display: flex;
+            flex-direction: column;
         }
         .chat-box {
-            max-height: 400px;
+            flex: 1;
             overflow-y: auto;
             margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #1f4068;
         }
         .chat-message {
             margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 10px;
         }
         .chat-message.user {
             text-align: right;
+            background-color: rgba(12, 12, 12, 0.678);
+            align-self: flex-end;
         }
         .chat-message.bot {
             text-align: left;
+            background-color: rgba(12, 12, 12, 0.678);
+            align-self: flex-start;
         }
 
-        #input-user
-        {
-            width: 50%;
+        .input-container {
+            display: flex;
+            margin-top: auto;
+        }
+        .input-container input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px 0 0 10px;
+            background-color: #1f4068;
+            color: #fff;
+        }
+        .input-container button {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 0 10px 10px 0;
+            background-color: #e94560;
+            color: #fff;
         }
 
     </style>
@@ -66,34 +91,34 @@
             if (userMessage.includes("/"))
             {
                 let new_message = userMessage.replace("/", "divided by");
-                const response = await fetch('/openAi_API_call/' + new_message);
+                const response = await fetch('/cohere_API/' + new_message);
                 const data = await response.text();
                 return data;
             }
             else if (userMessage.includes("*"))
             {
                 let new_message = userMessage.replace("*", "multiplied by");
-                const response = await fetch('/openAi_API_call/' + new_message);
+                const response = await fetch('/cohere_API/' + new_message);
                 const data = await response.text();
                 return data;
             }
             else if (userMessage.includes("+"))
             {
                 let new_message = userMessage.replace("+", "added to");
-                const response = await fetch('/openAi_API_call/' + new_message);
+                const response = await fetch('/cohere_API/' + new_message);
                 const data = await response.text();
                 return data;
             }
             else if (userMessage.includes("-"))
             {
                 let new_message = userMessage.replace("-", "subtracted by");
-                const response = await fetch('/openAi_API_call/' + new_message);
+                const response = await fetch('/cohere_API/' + new_message);
                 const data = await response.text();
                 return data;
             }
             else
             {
-                const response = await fetch('/openAi_API_call/' + userMessage);
+                const response = await fetch('/cohere_API/' + userMessage);
                 const data = await response.text();
                 return data;
             }
@@ -101,17 +126,18 @@
 
         async function sendMessage() {
             var userMessage = document.getElementById("user-input").value;
+            document.getElementById("user-input").value = "";
             var chatBox = document.getElementById("chat-box");
             var userMessageElement = document.createElement("div");
             userMessageElement.classList.add("chat-message", "user");
             userMessageElement.innerText = userMessage;
             chatBox.appendChild(userMessageElement);
 
-
-            var botResponse = await getCohereResponse(userMessage);
             var botMessageElement = document.createElement("div");
-            document.getElementById("user-input").value = "";
             botMessageElement.classList.add("chat-message", "bot");
+            botMessageElement.innerText = "Thinking...";
+            chatBox.appendChild(botMessageElement);
+            var botResponse = await getCohereResponse(userMessage);
             botMessageElement.innerText = botResponse;
             chatBox.appendChild(botMessageElement);
         }
