@@ -14,7 +14,6 @@ function calculateBMR(Gender, Weight, Height, Age) {
     else if (Gender === 'female') {
         let BMR = BMRFemale(Weight, Height, Age);
         document.getElementById('result').innerHTML = "Ditt ungefärliga BMR är : " + Math.round(BMR) + " Kalorier/Dag";
-        console.log(BMR);
     }
 }
 
