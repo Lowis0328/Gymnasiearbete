@@ -9,7 +9,7 @@ function BMRFemale(Weight, Height, Age) { //Harris Benedict Equation Female
 function calculateBMR(Gender, Weight, Height, Age) {
     if (Gender === 'male') {
         let BMR = BMRMale(Weight, Height, Age);
-        document.getElementById('result').innerHTML = "Ditt ungefärliga BMR är : " + BMR + " Kalorier/Dag";
+        document.getElementById('result').innerHTML = "Ditt ungefärliga BMR är : " + Math.round(BMR) + " Kalorier/Dag";
     }
     else if (Gender === 'female') {
         let BMR = BMRFemale(Weight, Height, Age);
