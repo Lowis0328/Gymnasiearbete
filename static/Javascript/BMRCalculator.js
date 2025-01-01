@@ -8,11 +8,23 @@ function BMRFemale(Weight, Height, Age) { //Harris Benedict Equation Female
 
 function calculateBMR(Gender, Weight, Height, Age) {
     if (Gender === 'male') {
-        return BMRMale(Weight, Height, Age);
+        let BMR = BMRMale(Weight, Height, Age);
+        document.getElementById('result').innerHTML = "Ditt ungefärliga BMR är : " + BMR + " Kalorier/Dag";
     }
     else if (Gender === 'female') {
-        return BMRFemale(Weight, Height, Age);
+        let BMR = BMRFemale(Weight, Height, Age);
+        document.getElementById('result').innerHTML = "Ditt ungefärliga BMR är : " + Math.round(BMR) + " Kalorier/Dag";
+        console.log(BMR);
     }
 }
 
-console.log(calculateBMR("male", 90, 183, 18));
+function OnClickBMR()
+{
+    let kön = document.getElementById('genderSelect').value;
+    let ålder = document.getElementById('age').value;
+    let vikt = document.getElementById('weight').value;
+    let längd = document.getElementById('height').value;
+    calculateBMR(kön, vikt, längd, ålder);
+}
+
+document.getElementById('Calculate').addEventListener('click', OnClickBMR);

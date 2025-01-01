@@ -15,7 +15,7 @@ def index():
 
 @app.route('/Verktyg')
 def Verktyg():
-    return render_template("resurser.html")
+    return render_template("verktyg.html")
 
 @app.route("/Råd")
 def Råd():
@@ -24,6 +24,9 @@ def Råd():
 @app.route("/Resurser")
 def Resurser():
     return render_template("resurser.html")
+@app.route("/Verktyg/BMRKalkylator")
+def BMRKalkylator():
+    return render_template("BMRKalkylator.html")
 
 @app.route('/cohere_API/<string:input>')
 def openAi_API_call(input):
@@ -33,7 +36,7 @@ def openAi_API_call(input):
     )
     return response.message.content[0].text
 
-@app.route('/AI_Chat')
+@app.route('/Verktyg/AI_Chat')
 def openAi_API():
     return render_template("Ai-Chat.html")
 

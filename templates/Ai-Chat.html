@@ -135,7 +135,7 @@
 
             var botMessageElement = document.createElement("div");
             botMessageElement.classList.add("chat-message", "bot");
-            botMessageElement.innerText = "Thinking...";
+            botMessageElement.innerText = "Tänker...";
             chatBox.appendChild(botMessageElement);
             var botResponse = await getCohereResponse(userMessage);
             botMessageElement.innerText = botResponse;
