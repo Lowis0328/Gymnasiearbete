@@ -28,6 +28,22 @@ def Resurser():
 def BMRKalkylator():
     return render_template("BMRKalkylator.html")
 
+@app.route("/Råd/Kost")
+def Råd_Kost():
+    return render_template("råd_kost.html")
+
+@app.route("/Råd/Träning")
+def Råd_Träning():
+    return render_template("träning.html")
+
+@app.route("/Råd/Sömn")
+def Råd_Familj():
+    return render_template("sömn.html")
+
+@app.route("/Råd/Stress")
+def Råd_Stress():
+    return render_template("stress.html")
+
 @app.route('/cohere_API/<string:input>')
 def openAi_API_call(input):
     response = co.chat(
