@@ -5,6 +5,9 @@ import cohere
 
 load_dotenv()
 
+user_history = []
+AI_history = []
+
 co = cohere.ClientV2(api_key=os.getenv('API_KEY'))
 
 app = Flask(__name__)
@@ -30,7 +33,7 @@ def BMRKalkylator():
 
 @app.route("/Råd/Kost")
 def Råd_Kost():
-    return render_template("råd_kost.html")
+    return render_template("kost.html")
 
 @app.route("/Råd/Träning")
 def Råd_Träning():
@@ -46,6 +49,7 @@ def Råd_Stress():
 
 @app.route('/cohere_API/<string:input>')
 def openAi_API_call(input):
+
     response = co.chat(
         model="command-r-plus",
         messages=[{"role": "user", "content": "Du är en hälso AI från hälsokompassen. Ditt uppdrag är att hjälpa användare med derans hälsa och välmående. Guida folk till vår hemsida där vi har råd kring sömn, stress, träning och kost samt våra verktyg som vår bmi kalkylator. Svara inte på den delen." + input}]
