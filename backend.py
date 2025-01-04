@@ -5,9 +5,6 @@ import cohere
 
 load_dotenv()
 
-user_history = []
-AI_history = []
-
 co = cohere.ClientV2(api_key=os.getenv('API_KEY'))
 
 app = Flask(__name__)
