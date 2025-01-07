@@ -1,13 +1,50 @@
-Råd
+#Råd
 
 #Sömn
 
+1. Varva ner innan du går till sängs, Det finns olika metoder för att varva ner inför natten. Pröva dig fram för att se vad som kan hjälpa. Ett varmt bad, en kopp varm mjölk eller kamomillte kan kännas rogivande. Att vara lagom mätt när du lägger dig är bra för sömnen. Undvik stora måltider på kvällen, men gå heller inte och lägg dig hungrig.
+2.Var utomhus
+
+Växlingen mellan ljus och mörker är viktig för din biologiska klocka. För att bli pigg under dagen kan du promenera ute i ljuset och tända lampor vintertid.
+
+Dämpa belysningen på kvällen. Är sovrummet mörkt, tyst och svalt är det lättare att somna. Störs du av ljus eller ljud kan ögonmask och öronproppar hjälpa.
+3.Kaffe, alkohol och nikotin stör sömnen
+
+Koffeinhaltiga drycker och alkohol försämrar sömnen. Både insomning, sömndjup och hur lång tid du sover påverkas av koffein. Koffeinet stannar kvar i kroppen olika länge hos olika människor. Du får pröva dig fram för att ta reda på hur sent du kan dricka kaffe eller koffeindrycker utan att sömnen störs.
+
+Alkohol kan ha en avslappnande effekt som kan leda till att du somnar lättare, men sömnen blir ytligare och du vaknar vanligtvis tidigare. Att dricka mycket alkohol kan vara en orsak till sömnproblem. Även nikotin påverkar sömnen negativt.
+4.Sov inte på dagen
+
+Har du svårt att sova på natten ska du undvika att sova på dagen eftersom det påverkar nattsömnen negativt.
+5.
+6.
+
 #Stress
+
+1. Villa och ta tid för återhämtning. För att vila och återhämta dig så kan du t.ex vila, göra något som du tycker om, vara i naturen, meditera och umgås med personer du mår bra av att vara med.
+2. Regelbunden fysisk aktivitet hjälper mot stress. Att röra på sig regelbundet är en nyckel till att minska stress, genom regelbunden fysiskt aktivitet blir du dessutom starkare och orkar mer. 
+3. Få tillräckligt med sömn. En vuxen människa behöver sova ungefär 6 - 9 per dygn och när du sover bättre så klarar du lättare av stress och påfrestningar.
+4. 
+5.
+6.
 
 #Kost
 
+1.
+2.
+3.
+4.
+5.
+6.
+
 #Träning
 
+1.
+2.
+3.
+4.
+5.
+6.
 
 #Källor
 
@@ -18,3 +55,7 @@ https://ki.se/forskning/popularvetenskap-och-dialog/fraga-forskaren/fragor-om-st
 https://www.regionostergotland.se/download/18.4fb27da18551dfea32c1f/1673259112590/Din%20guide%20till%20h%C3%A4lsa.pdf?
 
 https://dinpsykiskahalsa.se/artiklar/nar-livet-kanns-jobbigt/stress/?
+
+https://www.1177.se/liv--halsa/stresshantering-och-somn/somnen-ar-viktig-for-din-halsa/
+
+https://www.hjarnfonden.se/hjarnhalsa/stress/8-tips-for-att-minska-stressen/

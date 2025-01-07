@@ -44,6 +44,10 @@ def Råd_Familj():
 def Råd_Stress():
     return render_template("stress.html")
 
+@app.route("/Resurser/OmOss")
+def OmOss():
+    return render_template("OmOss.html")
+
 @app.route('/cohere_API/<string:input>')
 def openAi_API_call(input):
 
