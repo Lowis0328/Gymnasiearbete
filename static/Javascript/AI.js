@@ -31,7 +31,7 @@ function filterUserMessage(Message)
 }
 async function getCohereResponse(userMessage) {
 
-    const response = await fetch('/cohere_API/' + " Ditt förra svar: " +  + "Användarens förra meddelande: " + last_user_message + "Användarens Senaste meddelande: " + userMessage);
+    const response = await fetch('/cohere_API/' + userMessage);
     last_user_message = userMessage;
     const data = await response.text();
     last_ai_message = data;
