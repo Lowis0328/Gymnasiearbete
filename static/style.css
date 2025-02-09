@@ -5,9 +5,31 @@
     max-height: 50vh;
 }
 
-body
-{
-    overflow-y:hidden;
+.responsivText {
+    font-size: calc(1em + 0.5vw);
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.kort{
+    width: 30vh;
+    height: 30vh;
+    object-fit: cover;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 2vh;
+    -webkit-border-radius: 2vh;
+    -moz-border-radius: 2vh;
+    -ms-border-radius: 2vh;
+    -o-border-radius: 2vh;
+    @media (max-width: 768px) {
+        width: 10vh;
+        height: 25vh;
+        margin-top: 5vh;
+    }
 }
 
 .carousel, .carousel-inner, .active, .carousel-item{
@@ -20,9 +42,7 @@ body
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
     text-align: center;
-    font-weight: bold;
     font-size: calc(0.5em + 1vw);
 }
 

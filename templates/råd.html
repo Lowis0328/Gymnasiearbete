@@ -8,66 +8,70 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <title>Gymnasiearbete</title>
 </head>
-<div>
-    <nav class="navbar py-2">
-        <div class="container-fluid d-flex justify-content-between align-items-center">
+<body>
+  <nav class="navbar py-2">
+      <div class="container-fluid d-flex justify-content-between align-items-center">
           <button class="btn text-body"><b>Hälsokompassen</b></button>
-    
+
           <div class="d-flex">
-            <a href="index.html">
-              <button class="btn text-body py-1 me-lg-3">Hem</button>
-            </a>
-            <a href="råd.html">
-            <button class="btn text-body py-1 me-lg-3">Råd</button>
-            </a>
-            <button class="btn text-body py-1 me-lg-3">Resurser</button>
+              <a href="index.html">
+                  <button class="btn text-body py-1 me-lg-3">Hem</button>
+              </a>
+              <a href="råd.html">
+                  <button class="btn text-body py-1 me-lg-3">Råd</button>
+              </a>
+              <button class="btn text-body py-1 me-lg-3">Resurser</button>
           </div>
-        </div>
-      </nav>
-
-      <div class="container-fluid d-flex justify-content-center align-items-center Råd" style="color: antiquewhite;">
-        <h2 class="text-center" style="color: black;">Råd</h2>
       </div>
+  </nav>
 
-      <div class="d-flex flex-row flex-wrap">
-        <div class="container-fluid d-flex justify-content-center align-items-center verktygDiv">
-        <a href="Råd/Sömn">
-          <button class="btn">
-            <h2>Sömn</h2>
-          </button>
-        </a>
-        </div>
-    
-        <div class="container-fluid d-flex justify-content-center align-items-center newDiv">
-          <a href="Råd/Träning">
-            <button class="btn">
-              <h2>Träning</h2>
-            </button>
+  <div class="container my-5">
+      <h1 class="text-center">Råd</h1>
+      <p class="lead text-center">Här hittar du alla råd från <b>Hälsokompassen</b></p>
+  </div>
+
+  <div class="container">
+    <div class="row d-flex justify-content-between align-items-center gx-5">
+      <div class="col-md-5 d-flex justify-content-center kort mt-5">
+        <div class="d-flex flex-column justify-content-center align-items-center p-4">
+          <h3 class="text-center responsivText"><b>Sömn<i class="bi bi-calculator-fill"></i></b></h3>
+          <p class="lead text-center responsivText">Här hittar du råd och information gällande sömn och hur du kan få bättre sömn kvalite.</p>
+          <a href="/Råd/Sömn">
+            <button class="btn btn-primary btn-lg">Sömn-Råd</button>
           </a>
         </div>
-    
-        <div class="container-fluid d-flex justify-content-center align-items-center newDiv">
-          <a href="Råd/Stress">
-            <button class="btn">
-              <h2>Stress</h2>
-            </button>
+      </div>
+  
+      <div class="col-md-5 d-flex justify-content-center kort mt-5">
+        <div class="d-flex flex-column justify-content-center align-items-center p-4">
+          <h3 class="text-center responsivText"><b>Stress<i class="bi bi-chat-dots-fill"></i></b></h3>
+          <p class="lead text-center responsivText">Här hittar du råd och information gällande stress och stresshantering.</p>
+          <a href="/Råd/Stress">
+            <button class="btn btn-primary btn-lg">Stress-Råd</button>
           </a>
         </div>
-    
-        <div class="container-fluid d-flex justify-content-center align-items-center verktygDiv">
-          <a href="Råd/Kost">
-            <button class="btn">
-              <h2>Kost</h2>
-            </button>
-          </a>
+      </div>
+    </div>
+    <div class="row d-flex justify-content-between align-items-center gx-5">
+        <div class="col-md-5 d-flex justify-content-center kort mt-5">
+            <div class="d-flex flex-column justify-content-center align-items-center p-4">
+              <h3 class="text-center responsivText"><b>Träning<i class="bi bi-chat-dots-fill"></i></b></h3>
+              <p class="lead text-center responsivText">Här hittar du råd och information gällande träning.</p>
+              <a href="/Råd/Träning">
+                <button class="btn btn-primary btn-lg">Tränings-Råd</button>
+              </a>
+            </div>
+        </div>
+        <div class="col-md-5 d-flex justify-content-center kort mt-5">
+            <div class="d-flex flex-column justify-content-center align-items-center p-4">
+              <h3 class="text-center responsivText"><b>Kost<i class="bi bi-chat-dots-fill"></i></b></h3>
+              <p class="lead text-center responsivText">Här hittar du råd och information gällande kost.</p>
+              <a href="/Råd/Kost">
+                <button class="btn btn-primary btn-lg">Kost-Råd</button>
+              </a>
+            </div>
         </div>
     </div>
   </div>
-  <footer class="footer text-center mt-5">
-    <div class="container">
-        <p>Copyright &copy; 2025. All rights reserved.</p>
-        <p>Designed with <span class="text-danger">&hearts;</span> by Hälsokompassen</p>
-    </div>
-</footer>
 </body>
 </html>

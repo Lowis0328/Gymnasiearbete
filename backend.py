@@ -21,9 +21,9 @@ def Verktyg():
 def Råd():
     return render_template("råd.html")
 
-@app.route("/Resurser")
+@app.route("/Källor")
 def Resurser():
-    return render_template("resurser.html")
+    return render_template("Källor.html")
 @app.route("/Verktyg/BMRKalkylator")
 def BMRKalkylator():
     return render_template("BMRKalkylator.html")
@@ -42,11 +42,7 @@ def Råd_Familj():
 
 @app.route("/Råd/Stress")
 def Råd_Stress():
-    return render_template("stress.html")
-
-@app.route("/Resurser/OmOss")
-def OmOss():
-    return render_template("OmOss.html")
+    return render_template("stress.html") 
 
 @app.route('/cohere_API/<string:input>')
 def Cohere_API_Call(input):
