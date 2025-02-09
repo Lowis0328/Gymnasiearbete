@@ -1,8 +1,35 @@
-.carouselImage {  /*Behövdes för att göra så att carouselen såg någorlunda bra ut*/
-    width: auto;
-    height: auto;
+.carouselImage {  /*Behövdes för att göra så att carouselen såg någorlunda bra ut peepoHappy */
+    width: inherit;
+    height: inherit;
     max-width: 100%;
-    max-height: 40vh;
+    max-height: 50vh;
+}
+
+body
+{
+    overflow-y:hidden;
+}
+
+.carousel, .carousel-inner, .active, .carousel-item{
+    height: 30vh !important;
+    object-fit: cover !important;
+}
+
+.carousel-mitten-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: calc(0.5em + 1vw);
+}
+
+.carousel-caption-text {
+    margin: 0;
+    color: black;
+    font-size: calc(1em + 0.5vw);
 }
 
 .DivImages {
@@ -13,7 +40,7 @@
 
 .verktygDiv, .newDiv {
     flex: 1 1 50%;
-    height: 30vh;
+    height: 20vh;
     padding: 0 !important;
 }
 
@@ -30,7 +57,7 @@
     padding: 0;
     margin: 0;
     flex: 1 1 50%;
-    height: 30vh;
+    height: 24vh;
 }
 
 .Råd {

@@ -49,7 +49,7 @@ def OmOss():
     return render_template("OmOss.html")
 
 @app.route('/cohere_API/<string:input>')
-def openAi_API_call(input):
+def Cohere_API_Call(input):
 
     response = co.chat(
         model="command-r-plus",
