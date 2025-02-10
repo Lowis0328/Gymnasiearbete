@@ -5,6 +5,36 @@
     max-height: 50vh;
 }
 
+.chat-container {
+    width: 70vw;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.chat-box {
+    flex: 1;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.chat-message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.chat-message.user {
+    text-align: right;
+    background-color: rgba(17, 15, 15, 0.678);
+}
+.chat-message.bot {
+    text-align: left;
+    background-color: rgba(17, 15, 15, 0.678);
+}
+
 .responsivText {
     font-size: calc(0.5em + 1vw) !important;
 }
@@ -51,6 +81,26 @@
     transform: scale(102.5%);
 }
 
+.kortBMR
+{
+    width: 50vw !important;
+    height: 60vh;
+    object-fit: cover;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.401);
+    transition: box-shadow transform 0.5s;
+    border-radius: 2vh;
+    -webkit-border-radius: 2vh;
+    -moz-border-radius: 2vh;
+    -ms-border-radius: 2vh;
+    -o-border-radius: 2vh;
+    margin-bottom: 2.5vh;
+    transform: scale(100%);
+    transition: transform 0.25s;
+    @media (max-width: 768px) {
+        width: 70vw !important;
+        height: 60vh;
+    }
+}
 .carousel, .carousel-inner, .active, .carousel-item{
     height: 30vh !important;
     object-fit: cover !important;

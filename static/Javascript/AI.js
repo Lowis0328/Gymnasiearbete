@@ -39,6 +39,11 @@ async function getCohereResponse(userMessage) {
 }
 
 async function sendMessage() {
+
+    if (document.getElementById("user-input").value === "") {
+        return; // Så att man inte kan skicka iväg tomma meddelanden 🙏🏻
+    }
+
     var userMessage = document.getElementById("user-input").value;
     filteredUserMessage = filterUserMessage(userMessage);
     document.getElementById("user-input").value = "";

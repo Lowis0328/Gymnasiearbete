@@ -16,19 +16,6 @@
   select{
     width: 50% !important;
   }
-
-  .BMR-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 50vh;
-    width: 50vh;
-    background-color: rgb(23, 22, 43);
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 10px;
-  }
 </style>
 <body>
   <nav class="navbar py-2">
@@ -49,29 +36,29 @@
     </div>
   </nav>
 
-  <div class="BMR-container">
-    <h4 class="mb-4">Beräkna BMR</h4>
-    <input type="text" class="form-control" id="age" placeholder="Ålder">
-    <input type="text" class="form-control" id="weight" placeholder="Vikt(KG)">
-    <input type="text" class="form-control" id="height" placeholder="Längd(CM)">
-    <select id="aktivitetsNivå">
-      <option value="1">Liten eller ingen aktivitet</option>
-      <option value="2">Lätt aktivitet</option>
-      <option value="3">Måttlig aktivitetsnivå(3-5 gånger i veckan)</option>
-      <option value="4">Extremt aktiv(6-7 gånger i veckan)</option>
-    </select>
-    <select id="genderSelect">
-      <option value="male">Man</option>
-      <option value="female">Kvinna</option>
-    </select>
-    <button id="Calculate" class="mt-4">Beräkna BMR</button>
-    <p id="result" class="mt-4">Ditt ungefärliga BMR är : </p>
-  </div>
-  <footer class="footer text-center mt-5">
-    <div class="container">
-        <p>Copyright &copy; 2025. All rights reserved.</p>
-        <p>Designed with <span class="text-danger">&hearts;</span> by Hälsokompassen</p>
+  <div class="container mt-5">
+    <div class="row justify-content-evenly align-items-center">
+      <div class="justify-content-center align-items-center d-flex flex-column kortBMR">
+        <h4 class="mb-4">Beräkna BMR</h4>
+        <div class="row justify-content-evenly mb-4">
+          <input type="text" class="form-control" id="age" placeholder="Ålder">
+          <input type="text" class="form-control" id="weight" placeholder="Vikt(KG)">
+          <input type="text" class="form-control" id="height" placeholder="Längd(CM)">
+        </div>
+        <select class="form-select mb-4" id="aktivitetsNivå">
+          <option value="1">Liten eller ingen aktivitet</option>
+          <option value="2">Lätt aktivitet</option>
+          <option value="3">Måttlig aktivitetsnivå(3-5 gånger i veckan)</option>
+          <option value="4">Extremt aktiv(6-7 gånger i veckan)</option>
+        </select>
+        <select class="form-select mb-2" id="genderSelect">
+          <option value="male">Man</option>
+          <option value="female">Kvinna</option>
+        </select>
+        <button id="Calculate" class="mt-4 btn btn-light">Beräkna BMR</button>
+        <p id="result" class="mt-4">Ditt ungefärliga BMR är : </p>
+      </div>
     </div>
-</footer>
+  </div>
 </body>
 </html>
