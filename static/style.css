@@ -6,7 +6,7 @@
 }
 
 .responsivText {
-    font-size: calc(1em + 0.5vw);
+    font-size: calc(0.5em + 1vw) !important;
 }
 
 .footer{
@@ -15,21 +15,40 @@
     width: 100%;
 }
 
+.kortHem{
+    width: 15vw !important;
+    height: 20vh !important;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    color: white !important;
+}
+
 .kort{
-    width: 30vh;
-    height: 30vh;
+    width: 30vw !important;
+    height: 40vh;
     object-fit: cover;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.401);
+    transition: box-shadow transform 0.5s;
     border-radius: 2vh;
     -webkit-border-radius: 2vh;
     -moz-border-radius: 2vh;
     -ms-border-radius: 2vh;
     -o-border-radius: 2vh;
+    margin-bottom: 2.5vh;
+    transform: scale(100%);
+    transition: transform 0.25s;
     @media (max-width: 768px) {
-        width: 10vh;
+        width: 70vw !important;
         height: 25vh;
-        margin-top: 5vh;
     }
+
+}
+
+.kort:hover {
+    box-shadow: 0 0 20px 0 #0d6efd;
+    transition: box-shadow transform 0.5s;
+    transform: scale(102.5%);
 }
 
 .carousel, .carousel-inner, .active, .carousel-item{
@@ -48,7 +67,6 @@
 
 .carousel-caption-text {
     margin: 0;
-    color: black;
     font-size: calc(1em + 0.5vw);
 }
 
