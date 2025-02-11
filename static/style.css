@@ -1,3 +1,21 @@
+body {
+    background: #1f1f1f !important;
+    animation: fadeInGradient 1s;
+    -webkit-animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .carouselImage {  /*Behövdes för att göra så att carouselen såg någorlunda bra ut peepoHappy */
     width: inherit;
     height: inherit;
@@ -13,11 +31,14 @@
     height: 80vh;
     display: flex;
     flex-direction: column;
+    flex: 1;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
+
 .chat-box {
     flex: 1;
     margin-bottom: 20px;
+    overflow-y: auto;
     padding: 10px;
     border-radius: 10px;
 }
@@ -55,6 +76,7 @@
 }
 
 .kort{
+    background: rgb(27, 27, 27) !important;
     width: 30vw !important;
     height: 40vh;
     object-fit: cover;

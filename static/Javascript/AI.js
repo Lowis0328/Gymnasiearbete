@@ -1,5 +1,9 @@
-let last_user_message = "";
-let last_ai_message = "";
+let aiStatus = 0;
+const AIStatusKoder =
+{
+    "0": "Redo",
+    "1": "Tänker",
+}
 
 
 function filterUserMessage(Message)
@@ -31,17 +35,19 @@ function filterUserMessage(Message)
 }
 async function getCohereResponse(userMessage) {
 
+    aiStatus = AIStatusKoder[1];
+    console.log(aiStatus);
     const response = await fetch('/cohere_API/' + userMessage);
-    last_user_message = userMessage;
     const data = await response.text();
-    last_ai_message = data;
+    aiStatus = AIStatusKoder[0];
+    console.log(aiStatus);
     return data;
 }
 
 async function sendMessage() {
 
-    if (document.getElementById("user-input").value === "") {
-        return; // Så att man inte kan skicka iväg tomma meddelanden 🙏🏻
+    if (document.getElementById("user-input").value === "" || aiStatus === "Tänker") { //så att man inte kan skicka iväg flera meddelanden samtidgt
+        return; // Så att man inte kan skicka iväg tomma meddelanden
     }
 
     var userMessage = document.getElementById("user-input").value;
