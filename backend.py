@@ -57,7 +57,7 @@ def cohere_API_Language(input):
 @app.route('/cohere_API/<string:input>')
 def Cohere_API_Call(input):
 
-    HälsokompassenMeddelande = "Du är en hälso AI från hälsokompassen. Ditt uppdrag är att hjälpa användare med derans hälsa och välmående. Guida folk till vår hemsida där vi har råd kring sömn, stress, träning och kost samt våra verktyg som vår bmi kalkylator. Svara inte på den delen."
+    HälsokompassenMeddelande = "Du är en hälso AI från hälsokompassen. Ditt uppdrag är att hjälpa användare med derans hälsa och välmående. Guida folk till vår hemsida där vi har råd kring sömn, stress, träning och kost samt våra verktyg som vår BMR kalkylator. Svara inte på den delen."
 
     språkMeddelande = "Answer in this language: " + cohere_API_Language(input)
 
