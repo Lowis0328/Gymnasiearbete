@@ -44,6 +44,26 @@ async function getCohereResponse(userMessage) {
     return data;
 }
 
+function sleep(time) {
+    return new Promise((resolve) => setTimeout(resolve, time)); //https://www.geeksforgeeks.org/what-is-the-javascript-version-of-sleep-method/
+}
+
+async function typeingAnimationMessage(message, element) {
+    console.log(message);
+    element.innerHTML = "";
+    for (let i = 0; i < message.length; i++) {
+
+        element.innerHTML += message[i];
+
+        if (message.length > 100){
+            await sleep(1);
+        }
+        else{
+            await sleep(20);
+        }
+    }
+}
+
 async function sendMessage() {
 
     if (document.getElementById("user-input").value === "" || aiStatus === "Tänker") { //så att man inte kan skicka iväg flera meddelanden samtidgt
@@ -60,12 +80,13 @@ async function sendMessage() {
     chatBox.appendChild(userMessageElement);
 
     var botMessageElement = document.createElement("div");
+    botMessageElement.classList.add("typing");
     botMessageElement.classList.add("chat-message", "bot");
-    botMessageElement.innerText = "Tänker...";
     chatBox.appendChild(botMessageElement);
     var botResponse = await getCohereResponse(filteredUserMessage);
-    botMessageElement.innerText = botResponse;
+    botMessageElement.classList.remove("typing");
     chatBox.appendChild(botMessageElement);
+    await typeingAnimationMessage(botResponse, botMessageElement);
 }
 
 
