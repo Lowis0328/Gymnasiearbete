@@ -11,15 +11,15 @@ async function typingAnimation() {
         var typingelement = document.querySelector(".typing"); //Straight forward funktion nedan.
         await sleep(500);
         typingelement.innerText = ".";
-        if (typingelement.innerText.length > 2) continue; //Kollar ifall AI:ns svar har kommit igenom och avslutar då animationen så att den inte överskrider AI:ns svar.
+        if (typingelement.innerText[0] != ".") continue; //Kollar ifall AI:ns svar har kommit igenom och avslutar då animationen så att den inte överskrider AI:ns svar.
         await sleep(500);
-        if (typingelement.innerText.length > 3) continue;
+        if (typingelement.innerText[0] != ".") continue;
         typingelement.innerText = "..";
         await sleep(500);
-        if (typingelement.innerText.length > 4) continue;
+        if (typingelement.innerText[0] != ".") continue;
         typingelement.innerText = "...";
         await sleep(500);
-        if (typingelement.innerText.length > 5) continue;
+        if (typingelement.innerText[0] != ".") continue;
         typingelement.innerText = "....";
     }
 }
