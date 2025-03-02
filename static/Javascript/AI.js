@@ -1,4 +1,5 @@
 let aiStatus = 0;
+let skrivAnimation = false;
 const AIStatusKoder =
 {
     "0": "Redo",
@@ -89,7 +90,19 @@ async function sendMessage() {
     let botResponse = await getCohereResponse(filteredUserMessage); //Hämtar botens svar
     botMessageElement.classList.remove("typing"); //Tar bort klassen typing för att visa att boten inte skriver längre
     chatBox.appendChild(botMessageElement); //Lägger till botens meddelande i chat-boxen
-    await typeingAnimationMessage(botResponse, botMessageElement); //Kör typningsanimationen för botens meddelande
+    skrivAnimation = document.getElementById('animationToggle').checked; //Hämtar värdet på checkboxen
+    console.log(skrivAnimation);
+    switch (skrivAnimation)
+    {
+        case true:
+            await typeingAnimationMessage(botResponse, botMessageElement); //Kör typningsanimationen för botens meddelande
+            break;
+        case false:
+            botMessageElement.innerText = botResponse; //Om skrivAnimation är false, skriver AI:n direkt svaren
+            aiStatus = AIStatusKoder[0];
+            console.log(aiStatus);
+            break;
+    }
 }
 
 
