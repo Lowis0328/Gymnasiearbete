@@ -23,7 +23,7 @@ def Råd():
 
 @app.route("/Källor")
 def Resurser():
-    return render_template("Källor.html")
+    return render_template("Sources.html")
 @app.route("/Verktyg/BMRKalkylator")
 def BMRKalkylator():
     return render_template("BMRKalkylator.html")
