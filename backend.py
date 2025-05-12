@@ -5,7 +5,7 @@ import cohere
 
 load_dotenv()
 
-co = cohere.ClientV2(API_Nyckel=os.getenv('NyckelnTillCohere'))
+co = cohere.ClientV2(API_Key=os.getenv('Cohere_Key'))
 
 app = Flask(__name__)
 
